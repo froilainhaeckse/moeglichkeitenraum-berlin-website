@@ -1,0 +1,415 @@
+---
+// Kontext.astro
+// Lesefluss: WHY (Einleitung) → HOW (Grafik + Theorie) → PRINCIPLES (Karten)
+---
+
+<section id="kontext" class="kontext">
+
+  <!-- ── TITLE ─────────────────────────────────────────────── -->
+  <h2 class="kontext-h2">Was hier möglich wird?</h2>
+
+  <!-- ══════════════════════════════════════════
+       WHY — Emotionaler Einstieg
+  ══════════════════════════════════════════ -->
+  <div class="why">
+    <p>Als Menschen sind uns Gefühle angeboren. Doch wir haben gelernt,
+    sie zu deckeln. Wir treffen uns, um genau das zu ändern: Gefühle
+    wieder fühlbar zu machen — bewusst, verkörpert und lebendig.</p>
+    <p class="why-accent">Aber dieser Raum ist mehr als ein reiner Fühlraum.
+    Er ist ein Katalysator für dein volles Potenzial.</p>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       HOW — Methode & Erklärung
+  ══════════════════════════════════════════ -->
+  <div class="how-grid">
+
+    <!-- Linke Spalte: interaktives SVG -->
+    <div class="visual-wrap">
+      <svg
+        viewBox="0 0 400 215"
+        xmlns="http://www.w3.org/2000/svg"
+        class="diagram"
+        aria-label="Diagramm: Die Box (reaktive Entscheidung) versus der Möglichkeitenraum (360° Potenzial)"
+        role="img"
+      >
+        <defs>
+          <marker id="k-tip" markerWidth="7" markerHeight="5"
+                  refX="6" refY="2.5" orient="auto" markerUnits="strokeWidth">
+            <polygon points="0 0, 7 2.5, 0 5" fill="#3D2A18"/>
+          </marker>
+          <clipPath id="box-clip">
+            <circle cx="82" cy="108" r="52"/>
+          </clipPath>
+        </defs>
+
+        <!-- Die Box (links) -->
+        <g class="g-box">
+          <text x="82" y="19" text-anchor="middle" class="t-label">Die Box</text>
+
+          <circle cx="82" cy="108" r="52"
+            fill="none" stroke="#3D2A18" stroke-width="2"
+            stroke-dasharray="7 4" class="box-circle"/>
+
+          <path d="M 115 115 L 20 115 A 52 52 0 0 1 100 61 Z"
+                fill="#F5D060" fill-opacity="0.65" stroke="none"
+                clip-path="url(#box-clip)"/>
+
+          <line x1="115" y1="115" x2="30" y2="115"
+                stroke="#3D2A18" stroke-width="1.2" opacity="0.6"/>
+          <line x1="115" y1="115" x2="100" y2="61"
+                stroke="#3D2A18" stroke-width="1.2" opacity="0.6"/>
+
+          <line x1="61" y1="87" x2="77" y2="103"
+                stroke="#C44D2A" stroke-width="3.5" stroke-linecap="round"
+                class="box-x"/>
+          <line x1="77" y1="87" x2="61" y2="103"
+                stroke="#C44D2A" stroke-width="3.5" stroke-linecap="round"
+                class="box-x"/>
+
+          <!-- Person unten rechts im Kreis -->
+          <g transform="translate(108, 100)">
+            <circle cx="6" cy="6" r="4" fill="#9FB4C7" stroke="#3D2A18" stroke-width="1.2"/>
+            <line x1="6" y1="10" x2="6" y2="20" stroke="#3D2A18" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="2" y1="13" x2="10" y2="13" stroke="#3D2A18" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="6" y1="20" x2="3" y2="28" stroke="#3D2A18" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="6" y1="20" x2="9" y2="28" stroke="#3D2A18" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="6" cy="6" r="8" fill="none" stroke="#9FB4C7"
+                    stroke-dasharray="2 2" stroke-width="0.8" opacity="0.6"/>
+          </g>
+
+          <text x="82" y="194" text-anchor="middle" class="t-sub">reaktive Entscheidung</text>
+        </g>
+
+        <!-- oder -->
+        <text x="200" y="113" text-anchor="middle" class="t-oder">oder</text>
+
+        <!-- Möglichkeitenraum (rechts) -->
+        <g class="g-raum">
+          <text x="318" y="19" text-anchor="middle" class="t-label">Möglichkeitenraum</text>
+
+          <circle cx="318" cy="108" r="52"
+            fill="#FDFBE8" fill-opacity="0.8" class="raum-bg-glow"/>
+
+          <circle cx="318" cy="108" r="52"
+            fill="none" stroke="#3D2A18" stroke-width="2"
+            stroke-dasharray="7 4" class="box-circle"/>
+
+          <circle cx="318" cy="108" r="18"
+            fill="none" stroke="#3D2A18" stroke-width="1.5" class="raum-circle"/>
+
+          <!-- Person in der Mitte -->
+          <g transform="translate(312, 93)">
+            <circle cx="6" cy="6" r="4" fill="#9FB4C7" stroke="#3D2A18" stroke-width="1.2"/>
+            <line x1="6" y1="10" x2="6" y2="20" stroke="#3D2A18" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="2" y1="13" x2="10" y2="13" stroke="#3D2A18" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="6" y1="20" x2="3" y2="28" stroke="#3D2A18" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="6" y1="20" x2="9" y2="28" stroke="#3D2A18" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="6" cy="6" r="8" fill="none" stroke="#9FB4C7"
+                    stroke-dasharray="2 2" stroke-width="0.8" opacity="0.6"/>
+          </g>
+
+          <!-- Pfeile in alle Richtungen -->
+          <line x1="336" y1="108" x2="366" y2="108" class="arr a0"   marker-end="url(#k-tip)"/>
+          <line x1="331" y1="121" x2="352" y2="142" class="arr a45"  marker-end="url(#k-tip)"/>
+          <line x1="318" y1="126" x2="318" y2="156" class="arr a90"  marker-end="url(#k-tip)"/>
+          <line x1="305" y1="121" x2="284" y2="142" class="arr a135" marker-end="url(#k-tip)"/>
+          <line x1="300" y1="108" x2="270" y2="108" class="arr a180" marker-end="url(#k-tip)"/>
+          <line x1="305" y1="95"  x2="284" y2="74"  class="arr a225" marker-end="url(#k-tip)"/>
+          <line x1="318" y1="90"  x2="318" y2="60"  class="arr a270" marker-end="url(#k-tip)"/>
+          <line x1="331" y1="95"  x2="352" y2="74"  class="arr a315" marker-end="url(#k-tip)"/>
+
+          <text x="318" y="194" text-anchor="middle" class="t-sub">das Potenzial</text>
+        </g>
+      </svg>
+    </div>
+
+    <!-- Rechte Spalte: Theorie-Text -->
+    <div class="text-col">
+
+      <h3 class="text-h3">Gefühle als Navigationssystem</h3>
+      <p>
+        Ein echtes Gefühl im Jetzt dauert ca. 8 Sekunden. Hält es länger an
+        oder übernimmt es dich völlig, ist es eine <em>Emotion</em> aus der
+        Vergangenheit — ein altes Kindheits-Überlebensmuster. Ein Bewusstsein
+        für diese Strategien erweitert unseren Handlungsraum im Heute.
+      </p>
+
+      <h3 class="text-h3">Was ist die Box?</h3>
+      <p>
+        Die Box ist unser unbewusstes Interface aus Gewohnheiten und Annahmen.
+        Sie bestimmt den winzigen Ausschnitt an Möglichkeiten, in dem wir
+        reaktiv unser „X" als Entscheidung setzen — so wie in der Grafik
+        gezeigt.
+      </p>
+      <p>
+        Der Raum öffnet sich, wenn wir die Taubheitsschwelle senken. Neue,
+        freie Entscheidungen entstehen genau im Zusammenwirken zwischen
+        deiner Box und dem vollen Potenzial im Außen.
+      </p>
+
+    </div>
+
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       PRINCIPLES — Spielregeln des Raums
+  ══════════════════════════════════════════ -->
+  <div class="cards" role="list">
+
+    <article class="card" role="listitem">
+      <h3 class="card-q">Darf alles sein?</h3>
+      <p class="card-text">
+        Ja. Der Raum ist nicht-therapeutisch, sondern ein Trainingsfeld.
+        Es gibt kein „zu viel". Du bist sicher mit allen Gefühlen.
+      </p>
+    </article>
+
+    <article class="card" role="listitem">
+      <h3 class="card-q">Das Gold des gehaltenen Raums</h3>
+      <p class="card-text">
+        Warum nicht alleine? Wir lernen, füreinander präsent Raum zu halten.
+        In Gegenwart einer anderen Person wird Fühlen heilsam und kollektiv
+        ermächtigend.
+      </p>
+    </article>
+
+    <article class="card" role="listitem">
+      <h3 class="card-q">Fühlend sprechen</h3>
+      <p class="card-text">
+        Wir sprechen hier nicht <em>über</em> Gefühle — kein kognitives
+        Analysieren. Wir sprechen <em>fühlend</em> aus dem Moment heraus.
+      </p>
+    </article>
+
+  </div>
+
+</section>
+
+<style>
+  /* ── Sektion ──────────────────────────────────────────────────────────── */
+
+  .kontext {
+    max-width: 1100px !important;
+    padding: var(--space-lg) var(--space-md);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+  }
+
+  .kontext-h2 {
+    margin-bottom: 0;
+  }
+
+  /* ── WHY: Einleitungstext ─────────────────────────────────────────────── */
+
+    .why {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-width: 62ch;
+    }
+
+  .why p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--color-ink);
+    max-width: none;
+  }
+
+  .why-accent {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    color: var(--color-pine) !important;
+  }
+
+  /* ── HOW: Zwei-Spalten-Grid ───────────────────────────────────────────── */
+
+    .how-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: clamp(3rem, 6vw, 6rem);
+    align-items: center;
+
+    max-width: 1100px;
+    margin-inline: auto;
+    }
+
+  @media (max-width: 768px) {
+    .how-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-md);
+    }
+    .visual-wrap { order: -1; }
+  }
+
+  /* SVG-Container */
+.visual-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: transparent;
+  border: none;
+  border-radius: 0;
+
+  padding: 0;
+}
+
+.diagram {
+  width: 100%;
+  max-width: 540px;
+  height: auto;
+  display: block;
+}
+
+  /* SVG-Typografie */
+  .t-label {
+    font-family: var(--font-heading);
+    font-size: 13px;
+    font-weight: 600;
+    fill: var(--color-pine);
+  }
+
+  .t-sub {
+    font-size: 10px;
+    fill: var(--color-muted);
+  }
+
+  .t-oder {
+    font-family: var(--font-heading);
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+    fill: var(--color-muted);
+  }
+
+  /* Die Box: rotierende Strichelung */
+  .box-circle {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: spin-dash 20s linear infinite;
+  }
+
+  @keyframes spin-dash {
+    to { transform: rotate(360deg); }
+  }
+
+  .box-x { transition: stroke-width 0.2s ease; }
+
+  .g-box { cursor: default; }
+
+  .g-box:hover .box-circle { animation-play-state: paused; }
+  .g-box:hover .box-x      { stroke-width: 5; }
+
+  /* Möglichkeitenraum: Pfeile */
+  .arr {
+    stroke: #3D2A18;
+    stroke-width: 1.9;
+    stroke-linecap: round;
+    animation: arr-glow 3.2s ease-in-out infinite;
+    opacity: 0.35;
+  }
+
+  @keyframes arr-glow {
+    0%, 100% { opacity: 0.25; stroke-width: 1.6; }
+    50%       { opacity: 1.00; stroke-width: 2.2; }
+  }
+
+  .a0   { animation-delay: 0.0s; }
+  .a45  { animation-delay: 0.4s; }
+  .a90  { animation-delay: 0.8s; }
+  .a135 { animation-delay: 1.2s; }
+  .a180 { animation-delay: 1.6s; }
+  .a225 { animation-delay: 2.0s; }
+  .a270 { animation-delay: 2.4s; }
+  .a315 { animation-delay: 2.8s; }
+
+  .raum-circle { transition: stroke-width 0.2s ease; }
+  .g-raum      { cursor: default; }
+
+  .g-raum:hover .arr         { animation-play-state: paused; opacity: 1; stroke-width: 2.2; }
+  .g-raum:hover .raum-circle { stroke-width: 2.8; }
+
+  /* Text-Spalte */
+.text-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+  .text-h3 {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--color-pine);
+    padding-left: 0.85rem;
+    border-left: 2px solid var(--color-terra);
+    line-height: 1.3;
+    margin-top: 0.6rem;
+  }
+
+  .text-col .text-h3:first-child { margin-top: 0; }
+
+  .text-col p {
+    font-size: 0.95rem;
+    line-height: 1.75;
+    color: var(--color-muted);
+    max-width: 52ch;
+  }
+
+  .text-col em {
+    color: var(--color-ink);
+    font-style: italic;
+  }
+
+  /* ── PRINCIPLES: Karten ───────────────────────────────────────────────── */
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  .card {
+    background-color: var(--color-sand-light);
+    border-top: 2px solid var(--color-terra);
+    border-radius: 0 0 3px 3px;
+    padding: 1.5rem 1.4rem 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .card-q {
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--color-pine);
+  }
+
+  .card-text {
+    font-size: 0.875rem;
+    line-height: 1.7;
+    color: var(--color-muted);
+    max-width: none;
+  }
+
+  .card-text em {
+    color: var(--color-ink);
+    font-style: italic;
+  }
+
+  @media (max-width: 860px) {
+    .cards { grid-template-columns: 1fr 1fr; }
+    .card:last-child { grid-column: 1 / -1; }
+  }
+
+  @media (max-width: 520px) {
+    .cards { grid-template-columns: 1fr; }
+    .card:last-child { grid-column: auto; }
+  }
+</style>

@@ -1,0 +1,339 @@
+---
+// Teilnahme.astro — "Wie kannst du dabei sein?"
+---
+
+<section id="teilnahme" class="teilnahme">
+
+  <h2 class="teilnahme-heading">Wie kannst du dabei sein?</h2>
+
+  <div class="tgrid">
+
+    <!-- ══════════════════════════════════════════════════
+         SPALTE 1: Eckdaten
+    ══════════════════════════════════════════════════ -->
+    <div class="col-eckdaten">
+      <h3 class="col-label">Eckdaten</h3>
+
+      <ul class="meta-list">
+
+        <li class="meta-item">
+          <div class="meta-header">
+            <!-- Kalender-Icon -->
+            <svg class="meta-icon" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="1.6"
+                 stroke-linecap="round" stroke-linejoin="round"
+                 aria-hidden="true">
+              <rect x="3" y="4" width="18" height="18" rx="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/>
+              <line x1="8"  y1="2" x2="8"  y2="6"/>
+              <line x1="3"  y1="10" x2="21" y2="10"/>
+            </svg>
+            <span class="meta-label-text">Wann</span>
+          </div>
+          <p class="meta-value">Einmal monatlich — am 1. Dienstag</p>
+        </li>
+
+        <li class="meta-item">
+          <div class="meta-header">
+            <!-- Uhrzeit-Icon -->
+            <svg class="meta-icon" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="1.6"
+                 stroke-linecap="round" stroke-linejoin="round"
+                 aria-hidden="true">
+              <circle cx="12" cy="12" r="9"/>
+              <polyline points="12,6 12,12 15.5,15.5"/>
+            </svg>
+            <span class="meta-label-text">Zeitrahmen</span>
+          </div>
+          <p class="meta-value">17:00 – 19:00 Uhr</p>
+        </li>
+
+        <li class="meta-item">
+          <div class="meta-header">
+            <!-- Ort-Icon -->
+            <svg class="meta-icon" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="1.6"
+                 stroke-linecap="round" stroke-linejoin="round"
+                 aria-hidden="true">
+              <path d="M12 2C8.7 2 6 4.7 6 8c0 5.5 6 14 6 14s6-8.5 6-14c0-3.3-2.7-6-6-6z"/>
+              <circle cx="12" cy="8" r="2.2"/>
+            </svg>
+            <span class="meta-label-text">Wo</span>
+          </div>
+          <p class="meta-value">
+            Genaue Adresse in Berlin — Zusendung nach der ersten Anmeldung
+          </p>
+        </li>
+
+      </ul>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════
+         SPALTE 2: Voraussetzungen
+    ══════════════════════════════════════════════════ -->
+    <div class="col-basis">
+      <h3 class="col-label">Die gemeinsame Basis</h3>
+
+      <div class="notice" role="note">
+        <strong>Wichtig:</strong> Für die Teilnahme gibt es Voraussetzungen.
+        Bitte lies dir diese aufmerksam durch.
+      </div>
+
+      <div class="prereqs">
+
+        <!-- 1. Bewusstes Fühlen -->
+        <div class="prereq">
+          <div class="prereq-header">
+            <!-- Herzschlag / Fühlen-Icon -->
+            <svg class="prereq-icon" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="1.6"
+                 stroke-linecap="round" stroke-linejoin="round"
+                 aria-hidden="true">
+              <polyline points="2,12 5,12 8,4 12,20 15,9 18,14 20,12 22,12"/>
+            </svg>
+            <h4 class="prereq-title">Bewusstes Fühlen als Basis</h4>
+          </div>
+          <p class="prereq-text">
+            Die gemeinsame Basis unserer Treffen bildet das bewusste Fühlen
+            der eigenen Gefühle im Hier und Jetzt — die <em>8-Sekunden-Welle</em>
+            nach dem Verständnis des Possibility Managements. Da wir im Treffen
+            keine Zeit für die Grundlagen haben, ist diese Erfahrung zwingend
+            erforderlich.
+          </p>
+        </div>
+
+        <!-- 2. Alternative Grundlagen -->
+        <div class="prereq">
+          <div class="prereq-header">
+            <!-- Schild mit Checkmark -->
+            <svg class="prereq-icon" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="1.6"
+                 stroke-linecap="round" stroke-linejoin="round"
+                 aria-hidden="true">
+              <path d="M12 2l8 3v7c0 5.5-8 10-8 10S4 17.5 4 12V5l8-3z"/>
+              <polyline points="9,12 11,14 15,10"/>
+            </svg>
+            <h4 class="prereq-title">Alternative Grundlagen</h4>
+          </div>
+          <p class="prereq-text">
+            Andere reife Fühlpraktiken wie das <em>Ehrliche Mitteilen (EM)</em>
+            nach Gopal Norbert Klein oder Fühlräume nach Vivian Dittmar / GFK
+            bilden ebenfalls eine wunderbare Grundlage, auf der wir aufbauen
+            können.
+          </p>
+        </div>
+
+        <!-- 3. Intro-Session -->
+        <div class="prereq">
+          <div class="prereq-header">
+            <!-- Schlüssel-Icon -->
+            <svg class="prereq-icon" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="1.6"
+                 stroke-linecap="round" stroke-linejoin="round"
+                 aria-hidden="true">
+              <circle cx="7.5" cy="9.5" r="4"/>
+              <line x1="11.5" y1="9.5" x2="21" y2="9.5"/>
+              <line x1="18"   y1="9.5" x2="18" y2="13"/>
+              <line x1="15.5" y1="9.5" x2="15.5" y2="12"/>
+            </svg>
+            <h4 class="prereq-title">Dein Einstieg — die Intro-Session</h4>
+          </div>
+          <p class="prereq-text">
+            Dir fehlt noch die Erfahrung? Du kannst sie vorab aufbauen. Wir
+            bieten eine ca. 2-stündige Intro-Session an — eine Einführung in
+            die Wutarbeit für Frauen. Alternativ empfehlen wir Veranstaltungen
+            aus dem Possibility&nbsp;Management&nbsp;Dorf (Berlin oder online).
+            Das Intro ist als Dienst an der Community gedacht und bezahlbar.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  /* ── Sektion ──────────────────────────────────────────────────────────── */
+
+  .teilnahme {
+    max-width: 1100px !important;
+    padding: var(--space-lg) var(--space-md);
+    margin: 0 auto;
+  }
+
+  .teilnahme-heading {
+    margin-bottom: var(--space-md);
+    padding-bottom: var(--space-xs);
+    border-bottom: 2px solid var(--color-terra);
+    display: inline-block;
+  }
+
+  /* ── Zweispaltiges Grid ───────────────────────────────────────────────── */
+
+  .tgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+    align-items: start;
+  }
+
+  @media (max-width: 768px) {
+    .tgrid {
+      grid-template-columns: 1fr;
+      gap: var(--space-md);
+    }
+  }
+
+  /* ── Spalten-Label ────────────────────────────────────────────────────── */
+
+  .col-label {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    margin-bottom: 1.25rem;
+  }
+
+  /* ══════════════════════════════════════════════════
+     SPALTE 1: Meta-Liste (Eckdaten)
+  ══════════════════════════════════════════════════ */
+
+  .meta-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .meta-item {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--color-sand-dark);
+  }
+
+  .meta-item:first-child {
+    padding-top: 0;
+  }
+
+  .meta-item:last-child {
+    border-bottom: none;
+  }
+
+  .meta-header {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .meta-icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    color: var(--color-terra);
+  }
+
+  .meta-label-text {
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--color-pine);
+  }
+
+  .meta-value {
+    padding-left: calc(18px + 0.6rem); /* Bündig mit Text nach dem Icon */
+    color: var(--color-muted);
+    font-size: 0.95rem;
+    max-width: none;
+    line-height: 1.55;
+  }
+
+  /* ══════════════════════════════════════════════════
+     SPALTE 2: Voraussetzungen
+  ══════════════════════════════════════════════════ */
+
+  /* Hinweis-Box */
+  .notice {
+    background-color: rgba(196, 77, 42, 0.07);
+    border-left: 3px solid var(--color-terra);
+    border-radius: 0 3px 3px 0;
+    padding: 0.8rem 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--color-ink);
+    line-height: 1.55;
+    max-width: none;
+  }
+
+  .notice strong {
+    color: var(--color-terra);
+    font-weight: 600;
+  }
+
+  /* Einzelne Voraussetzungen */
+  .prereqs {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .prereq {
+    padding: 1.1rem 0;
+    border-bottom: 1px solid var(--color-sand-dark);
+  }
+
+  .prereq:first-child {
+    padding-top: 0;
+  }
+
+  .prereq:last-child {
+    border-bottom: none;
+  }
+
+  .prereq-header {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .prereq-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    color: var(--color-terra);
+  }
+
+  .prereq-title {
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-pine);
+    line-height: 1.3;
+  }
+
+  .prereq-text {
+    padding-left: calc(20px + 0.65rem); /* Icon-Breite + Gap */
+    font-size: 0.9rem;
+    color: var(--color-muted);
+    line-height: 1.65;
+    max-width: 52ch;
+  }
+
+  .prereq-text em {
+    color: var(--color-ink);
+    font-style: italic;
+  }
+
+  .prereq-text a {
+    color: var(--color-pine);
+    text-underline-offset: 3px;
+  }
+
+  .prereq-text a:hover {
+    color: var(--color-terra);
+  }
+</style>

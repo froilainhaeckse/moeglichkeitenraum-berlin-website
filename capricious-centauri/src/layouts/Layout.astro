@@ -1,0 +1,112 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = 'Ein Raum für fühlende Begegnung — Möglichkeitenraum Berlin.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+
+    <!-- Google Fonts: Poppins (Überschriften) + Inter (Fließtext) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+
+    <!-- Seiteninhalt der jeweiligen Page -->
+    <slot />
+
+    <!-- ── Gemeinsamer Footer ──────────────────────────── -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+
+        <div class="footer-brand">
+          <p class="footer-name">Möglichkeitenraum Berlin</p>
+          <p class="footer-tagline">Ein Raum für fühlende Begegnung.</p>
+        </div>
+
+        <p class="footer-copy">© 2026 Möglichkeitenraum Berlin</p>
+
+      </div>
+    </footer>
+
+  </body>
+</html>
+
+<style>
+  /* ── Footer ────────────────────────────────────────────────────────────── */
+
+  .site-footer {
+    border-top: 1px solid var(--color-sand-dark);
+    background-color: var(--color-sand);
+    padding: var(--space-lg) var(--space-md);
+  }
+
+  .footer-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    gap: 0.5rem var(--space-lg);
+    align-items: start;
+  }
+
+  .footer-brand {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .footer-name {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--color-pine);
+    max-width: none;
+  }
+
+  .footer-tagline {
+    font-size: 0.875rem;
+    color: var(--color-muted);
+    margin-top: 0.2rem;
+    max-width: none;
+  }
+
+  .footer-copy {
+    grid-column: 1;
+    grid-row: 2;
+    font-size: 0.8rem;
+    color: var(--color-muted);
+    opacity: 0.7;
+    max-width: none;
+  }
+
+  @media (max-width: 540px) {
+    .footer-inner {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+    }
+    .footer-copy {
+      grid-column: 1;
+      grid-row: auto;
+    }
+  }
+</style>

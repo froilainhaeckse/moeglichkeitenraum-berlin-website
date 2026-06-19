@@ -1,0 +1,136 @@
+---
+// WerWirSind.astro
+// Bilder einfach in /public/images/ ablegen und den src-Pfad anpassen
+
+interface TeamMember {
+    name: string;
+    role: string;
+    imageSrc: string;
+    imageAlt: string;
+}
+
+const team: TeamMember[] = [
+    {
+        name: "Ina Zukrigl-Schief",
+        role: "Co-Leadership Coach und Interaktionsdesignerin für lebendige Räume",
+        imageSrc: "/images/Ina+-SA+Portrait.webp",
+        imageAlt: "Foto von Ina",
+    },
+    {
+        name: "Thea Kupler",
+        role: "Agile Coach und Souveränitätsmagierin",
+        imageSrc: "/images/person-2.jpg",
+        imageAlt: "Foto von Thea Kupler",
+    },
+];
+---
+
+<section id="wer-wir-sind" class="team-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Wer wir sind</h2>
+            <div class="title-rule"></div>
+        </div>
+
+        <div class="team-grid">
+            {
+                team.map((member) => (
+                    <div class="team-card">
+                        <img
+                            src={member.imageSrc}
+                            alt={member.imageAlt}
+                            class="avatar"
+                            loading="lazy"
+                        />
+                        <h3 class="member-name">{member.name}</h3>
+                        <p class="member-role">{member.role}</p>
+                        {member.bio && <p class="member-bio">{member.bio}</p>}
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+</section>
+
+<style>
+    .team-section {
+        padding: 5rem 2rem;
+        background-color: #faf8f5;
+    }
+
+    .container {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    /* Titel linksbündig wie auf der restlichen Seite */
+    .section-header {
+        margin-bottom: 3rem;
+    }
+
+    .section-title {
+        font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+        font-weight: 700;
+        color: #2c2420;
+        margin: 0 0 0.5rem;
+    }
+
+    .title-rule {
+        width: 3rem;
+        height: 2px;
+        background-color: #8b3a2a;
+    }
+
+    /* Zwei Spalten wie "Wie kannst du dabei sein?" */
+    .team-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem 5rem;
+        align-items: start;
+    }
+
+    .team-card {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .avatar {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        display: block;
+        margin-bottom: 0.75rem;
+    }
+
+    .member-name {
+        font-size: 1rem;
+        font-weight: 700;
+        color: #2c2420;
+        margin: 0;
+    }
+
+    .member-role {
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: #8b3a2a;
+        margin: 0 0 0.25rem;
+    }
+
+    .member-bio {
+        font-size: 0.95rem;
+        line-height: 1.65;
+        color: #555;
+        margin: 0;
+    }
+
+    @media (max-width: 600px) {
+        .team-grid {
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+        }
+    }
+</style>

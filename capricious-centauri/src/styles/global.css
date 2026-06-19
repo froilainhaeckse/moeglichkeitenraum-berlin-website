@@ -1,0 +1,165 @@
+/* ─── Tokens ─────────────────────────────────────────────────────────────── */
+
+:root {
+    /* Farben */
+    --color-sand: #f4ecd8; /* warmes Creme – Hintergrund */
+    --color-sand-light: #faf6ee; /* hellere Fläche, Karten */
+    --color-sand-dark: #e2d4ba; /* Border, Trennlinien */
+
+    --color-pine: #3d2a18; /* warmes Dunkelbraun – aus dem Holzboden */
+    --color-pine-light: #6b4e35; /* mittleres Warmbraun, Hover */
+
+    --color-terra: #c44d2a; /* Terracotta/Feuerrot – Wutkraft */
+    --color-terra-dark: #a33b1d; /* Hover Akzent */
+
+    --color-ink: #261d12; /* fast-schwarz, warmer Unterton */
+    --color-muted: #7a6553; /* Sekundärtext */
+
+    /* Schriften */
+    --font-heading: "Poppins", sans-serif;
+    --font-body: "Inter", sans-serif;
+
+    /* Abstände */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 4rem;
+    --space-xl: 8rem;
+
+    /* Layout */
+    --max-width: 800px;
+    --radius: 4px;
+}
+
+/* ─── Reset ──────────────────────────────────────────────────────────────── */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ─── Base ───────────────────────────────────────────────────────────────── */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    font-size: 1.0625rem; /* 17px – gut lesbar */
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ─── Typografie ─────────────────────────────────────────────────────────── */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    line-height: 1.25;
+    color: var(--color-pine);
+}
+
+h1 {
+    font-size: clamp(2.25rem, 5vw, 3.5rem);
+    font-weight: 700;
+}
+h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+h3 {
+    font-size: 1.25rem;
+}
+
+p {
+    max-width: 65ch;
+    color: var(--color-ink);
+}
+
+p + p {
+    margin-top: var(--space-sm);
+}
+
+a {
+    color: var(--color-pine);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--color-terra);
+}
+
+/* ─── Sections ───────────────────────────────────────────────────────────── */
+
+section {
+    padding: var(--space-lg) var(--space-md);
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+section h2 {
+    margin-bottom: var(--space-sm);
+    padding-bottom: var(--space-xs);
+    border-bottom: 2px solid var(--color-terra);
+    display: inline-block;
+}
+
+/* ─── Akzent-Elemente ────────────────────────────────────────────────────── */
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.75rem;
+    border-radius: var(--radius);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--color-terra);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-terra-dark);
+    color: #fff;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--color-pine);
+    border: 2px solid var(--color-pine);
+}
+
+.btn-outline:hover {
+    background-color: var(--color-pine);
+    color: var(--color-sand-light);
+}
+
+/* ─── Footer ─────────────────────────────────────────────────────────────── */
+
+footer {
+    padding: var(--space-lg) var(--space-md);
+    text-align: center;
+    color: var(--color-muted);
+    font-size: 0.875rem;
+    border-top: 1px solid var(--color-sand-dark);
+}

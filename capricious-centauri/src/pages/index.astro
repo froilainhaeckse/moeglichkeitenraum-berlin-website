@@ -1,97 +1,23 @@
 ---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/moeglichkeitenraum/Header.astro";
+import Kontext from "../components/moeglichkeitenraum/Kontext.astro";
+import Teilnahme from "../components/moeglichkeitenraum/Teilnahme.astro";
+import WerWirSind from "../components/moeglichkeitenraum/WerWirSind.astro";
+import Kontakt from "../components/moeglichkeitenraum/Kontakt.astro";
 ---
 
-<html lang="de">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Möglichkeitenraum</title>
-    <style>
-      body {
-        margin: 0;
-        font-family: system-ui, sans-serif;
-        background: #ffffff;
-        color: #111;
-      }
+<Layout
+    title="Möglichkeitenraum Berlin"
+    description="Ein Raum für fühlende Begegnung — Möglichkeitenraum Berlin."
+>
+    <Header />
 
-      nav {
-        padding: 1.5rem 2rem;
-        display: flex;
-        justify-content: space-between;
-      }
+    <Kontext />
 
-      nav a {
-        text-decoration: none;
-        color: inherit;
-        margin-left: 1.5rem;
-      }
+    <Teilnahme />
 
-      section {
-        padding: 6rem 2rem;
-        max-width: 800px;
-        margin: 0 auto;
-      }
+    <WerWirSind />
 
-      h1 {
-        font-size: 3rem;
-        font-weight: 600;
-      }
-
-      h2 {
-        font-size: 1.8rem;
-        margin-bottom: 1rem;
-      }
-
-      .hero {
-        padding: 8rem 2rem;
-        text-align: center;
-      }
-
-      footer {
-        padding: 3rem 2rem;
-        text-align: center;
-        opacity: 0.6;
-      }
-    </style>
-  </head>
-  <body>
-    <nav>
-      <div>Möglichkeitenraum</div>
-      <div>
-        <a href="#raum">Raum</a>
-        <a href="#termine">Termine</a>
-        <a href="#ueber">Über</a>
-        <a href="#kontakt">Kontakt</a>
-      </div>
-    </nav>
-
-    <div class="hero">
-      <h1>Möglichkeitenraum</h1>
-      <p>Ein Raum für fühlende Begegnung.</p>
-    </div>
-
-    <section id="raum">
-      <h2>Der Raum</h2>
-      <p>Text folgt …</p>
-    </section>
-
-    <section id="termine">
-      <h2>Termine</h2>
-      <p>Text folgt …</p>
-    </section>
-
-    <section id="ueber">
-      <h2>Über uns</h2>
-      <p>Text folgt …</p>
-    </section>
-
-    <section id="kontakt">
-      <h2>Kontakt</h2>
-      <p>hello@moeglichkeitenraum.berlin</p>
-    </section>
-
-    <footer>
-      © 2026 Möglichkeitenraum
-    </footer>
-  </body>
-</html>
+    <Kontakt />
+</Layout>

@@ -1,0 +1,75 @@
+---
+// Kontakt.astro
+
+const email = "go@moeglichkeitenraum-berlin.de";
+---
+
+<section id="kontakt" class="kontakt-section">
+    <div class="container">
+        <h2 class="section-title">Kontakt</h2>
+        <p class="kontakt-text">
+            Du möchtest dabei sein, hast eine Frage oder willst mehr über die
+            Intro-Session erfahren?<br />
+            Schreib uns einfach eine E-Mail — wir melden uns bei dir.
+        </p>
+        <a href={`mailto:${email}`} class="email-link">
+            {email}
+        </a>
+    </div>
+</section>
+
+<style>
+    .kontakt-section {
+        padding: 6rem 1.5rem;
+        background-color: #2c2420; /* dunkler Ton wie die Navbar */
+        color: #f5f0ea;
+    }
+
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .section-title {
+        font-size: clamp(1.8rem, 4vw, 2.6rem);
+        font-weight: 700;
+        color: #f5f0ea;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Trennlinie wie bei anderen Sektionen */
+    .section-title::after {
+        content: "";
+        display: block;
+        width: 3rem;
+        height: 2px;
+        background-color: #8b3a2a;
+        margin: 0.6rem auto 2rem;
+    }
+
+    .kontakt-text {
+        font-size: 1.05rem;
+        line-height: 1.75;
+        color: #c8bfb5;
+        margin-bottom: 2rem;
+    }
+
+    .email-link {
+        display: inline-block;
+        font-size: 1.05rem;
+        font-weight: 600;
+        color: #f5f0ea;
+        text-decoration: none;
+        border-bottom: 2px solid #8b3a2a;
+        padding-bottom: 3px;
+        transition:
+            color 0.2s ease,
+            border-color 0.2s ease;
+    }
+
+    .email-link:hover {
+        color: #d4a896;
+        border-color: #d4a896;
+    }
+</style>
